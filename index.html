@@ -2,54 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lejohn D. Ramos | Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lejohn D. Ramos - Student, Aspiring Developer, and Explorer">
+    <title>Lejohn D. Ramos | Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="profile-card">
+<div class="profile-card">
+    
+    <!-- PROFILE SECTION -->
+    <img src="bronny.jpg" alt="Lejohn D. Ramos Profile Picture" class="avatar">
 
-        <img src="bronny.png" alt="Lejohn D. Ramos" class="avatar">
+    <h1>Lejohn D. Ramos</h1>
+    <p class="tagline">Student • Aspiring Developer • Explorer</p>
 
-        <h1>LBronny</h1>
-        <p class="tagline">Student • Aspiring Developer • Explorer</p>
-
-        <div class="info">
-            <p><strong>Age:</strong> 20</p>
-            <p><strong>Hobbies:</strong> Anything beyond my reach</p>
-        </div>
-
-        <p class="bio">
-            I’m a curious individual who enjoys pushing limits, learning new things,
-            and exploring ideas that challenge my current abilities.
-            Growth begins where comfort ends.
-        </p>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML & CSS (Basic)</li>
-                <li>Java & JavaScript (Beginner)</li>
-                <li>Logical Thinking</li>
-                <li>Creative Problem Solving</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Goals</h2>
-            <p>
-                To improve my skills step by step, build real projects,
-                and create systems that reflect creativity and purpose.
-            </p>
-        </div>
-
-        <div class="links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="mailto:youremail@gmail.com">Email</a>
-        </div>
-
+    <div class="info">
+        <p><strong>Age:</strong> 20</p>
+        <p><strong>Hobbies:</strong> Anything beyond my reach</p>
     </div>
 
+    <p class="bio">
+        I enjoy learning things beyond my limits and turning ideas into interactive experiences.
+    </p>
+
+    <!-- SKILLS SECTION -->
+    <section class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS (Basic)</li>
+            <li>Java & JavaScript (Beginner)</li>
+            <li>Logical Thinking</li>
+            <li>Creative Problem Solving</li>
+        </ul>
+    </section>
+
+    <!-- GOALS SECTION -->
+    <section class="section">
+        <h2>Goals</h2>
+        <p>
+            To improve my skills step by step, build real projects,
+            and create systems that reflect creativity and purpose.
+        </p>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <div class="links">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=youremail@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Send Email via Gmail">Email</a>
+    </div>
+
+    <!-- GAME BUTTON -->
+    <button id="enter-game-btn" aria-label="Toggle Shooting Game">
+        🎯 Enter Shooting Game
+    </button>
+
+    <!-- GAME CONTAINER -->
+    <div id="game-container" class="hidden" aria-live="polite">
+        
+        <!-- Game Statistics -->
+        <div class="game-stats">
+            <span class="stat" id="score" aria-label="Current Score">Score: 0</span>
+            <span class="stat" id="timer" aria-label="Time Remaining">Time: 30s</span>
+            <span class="stat" id="level" aria-label="Current Level">Level: 1</span>
+            <span class="stat" id="misses" aria-label="Misses Remaining">❤️ 5</span>
+        </div>
+
+        <!-- Game Area -->
+        <div id="game-area" role="application" aria-label="Shooting Game Area">
+            <img src="bronny.png" id="target" alt="Target" draggable="false">
+            
+            <!-- Game Over Screen -->
+            <div id="game-over" role="dialog" aria-labelledby="game-over-title">
+                <h3 id="game-over-title">Game Over!</h3>
+                <p id="game-over-reason" class="game-reason"></p>
+                <p id="final-score">Score: 0</p>
+                <p id="highest-level">Highest Level: 1</p>
+                <p class="game-message">Great job! Try to beat your score!</p>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button class="game-btn" id="restart-btn" aria-label="Restart Game">🔄 Restart</button>
+            <button class="game-btn" id="pause-btn" aria-label="Pause Game">⏸️ Pause</button>
+        </div>
+
+        <!-- High Score Display -->
+        <p id="high-score" class="high-score">High Score: 0</p>
+    </div>
+
+</div>
+
+<script src="game.js"></script>
 </body>
 </html>
