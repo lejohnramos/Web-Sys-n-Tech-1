@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lejohn D. Ramos - Student, Aspiring Developer, and Explorer">
+    <title>Lejohn D. Ramos | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">LDR</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="assets/html/about.html" class="nav-link">About</a></li>
+                <li><a href="assets/html/projects.html" class="nav-link">Projects</a></li>
+                <li><a href="assets/html/certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="assets/html/activities.html" class="nav-link">Activities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Profile Section - Top -->
+        <div class="profile-card">
+            <img src="assets/image/kap.jpg" alt="Lejohn D. Ramos Profile Picture" class="avatar">
+            
+            <h1>Lejohn D. Ramos</h1>
+            <p class="tagline">Student • Aspiring Developer • Explorer</p>
+
+            <div class="info">
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Location:</strong> Quezon City, Philippines</p>
+                <p><strong>Email:</strong> ratantanan@gmail.com</p>
+            </div>
+
+            <p class="bio">
+                I enjoy learning things beyond my limits and turning ideas into interactive experiences.
+                Currently exploring web development and creative problem-solving.
+            </p>
+
+            <section class="section">
+                <h2>Quick Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Years Old</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Skills</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Curiosity</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ratantanan@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+            </div>
+
+            <!-- Game Button -->
+            <button id="enter-game-btn">🎯 Enter Shooting Game</button>
+
+            <!-- Shooting Game Container -->
+            <div id="game-container" class="hidden">
+                <div class="game-stats">
+                    <span class="stat" id="score">Score: 0</span>
+                    <span class="stat" id="timer">Time: 30s</span>
+                    <span class="stat" id="level">Level: 1</span>
+                    <span class="stat" id="misses">❤️ 5</span>
+                </div>
+
+                <div id="game-area">
+                    <!-- Target image -->
+                    <img src="assets/image/bronny.png" id="target" alt="Target">
+                    
+                    <div id="game-over">
+                        <h3>Game Over!</h3>
+                        <p id="game-over-reason"></p>
+                        <p id="final-score">Score: 0</p>
+                        <p id="highest-level">Highest Level: 1</p>
+                        <p>Great job! Try to beat your score!</p>
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <button class="game-btn" id="restart-btn">🔄 Restart</button>
+                    <button class="game-btn" id="pause-btn">⏸️ Pause</button>
+                </div>
+
+                <p id="high-score" class="high-score">High Score: 0</p>
+            </div>
+        </div>
+
+        <!-- Snake Game - Bottom Left -->
+        <div class="game-section">
+            <h2 class="game-title">🐍 Snake Game</h2>
+            <iframe srcdoc='<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><style>*{margin:0;padding:0;box-sizing:border-box}body{display:flex;justify-content:center;align-items:center;min-height:100vh;background-color:#2c3e50;font-family:Arial,sans-serif;padding:10px}.game-container{text-align:center;max-width:100%}h1{color:#9bbc0f;margin-bottom:20px;font-size:2em;text-shadow:2px 2px 4px rgba(0,0,0,.5)}.score-board{background-color:#0f380f;color:#9bbc0f;padding:10px 20px;margin-bottom:10px;border-radius:5px;font-size:1.2em;font-weight:700}canvas{background-color:#9bbc0f;border:8px solid #0f380f;border-radius:5px;box-shadow:0 0 20px rgba(0,0,0,.5);max-width:100%;height:auto}.mobile-controls{margin-top:20px;display:grid;grid-template-columns:repeat(3,60px);grid-template-rows:repeat(3,60px);gap:8px;justify-content:center}.control-btn{background-color:#0f380f;color:#9bbc0f;border:3px solid #9bbc0f;border-radius:10px;font-size:1.5em;font-weight:700;cursor:pointer;transition:all .1s;user-select:none;display:flex;align-items:center;justify-content:center}.control-btn:active{background-color:#9bbc0f;color:#0f380f;transform:scale(.95)}.control-btn.up{grid-column:2;grid-row:1}.control-btn.left{grid-column:1;grid-row:2}.control-btn.center{grid-column:2;grid-row:2;background-color:#306230;border-color:#0f380f;font-size:.9em;cursor:default}.control-btn.right{grid-column:3;grid-row:2}.control-btn.down{grid-column:2;grid-row:3}#gameOverScreen{position:absolute;display:none;flex-direction:column;justify-content:center;align-items:center;background-color:rgba(15,56,15,.95);color:#9bbc0f;border-radius:10px;padding:30px;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10}#gameOverScreen.show{display:flex}#gameOverScreen h2{font-size:2em;margin-bottom:15px}#gameOverScreen p{font-size:1.2em;margin:8px 0}.restart-btn{background-color:#9bbc0f;color:#0f380f;border:none;padding:12px 25px;font-size:1.1em;font-weight:700;border-radius:5px;cursor:pointer;margin-top:15px;transition:transform .2s}.restart-btn:hover{transform:scale(1.1)}.restart-btn:active{transform:scale(.95)}</style></head><body><div class="game-container"><h1>🐍 SNAKE</h1><div class="score-board">Score: <span id="score">0</span></div><div style="position:relative"><canvas id="gameCanvas" width="400" height="400"></canvas><div id="gameOverScreen"><h2>GAME OVER!</h2><p>Final Score: <span id="finalScore">0</span></p><button class="restart-btn" onclick="restartGame()">PLAY AGAIN</button></div></div><div class="mobile-controls"><button class="control-btn up" id="btnUp">▲</button><button class="control-btn left" id="btnLeft">◄</button><div class="control-btn center">🐍</div><button class="control-btn right" id="btnRight">►</button><button class="control-btn down" id="btnDown">▼</button></div></div><script>const canvas=document.getElementById("gameCanvas"),ctx=canvas.getContext("2d"),scoreElement=document.getElementById("score"),finalScoreElement=document.getElementById("finalScore"),gameOverScreen=document.getElementById("gameOverScreen"),TILE_SIZE=20,GRID_WIDTH=20,GRID_HEIGHT=20,GAME_SPEED=100;let snake=[],food={},direction="RIGHT",nextDirection="RIGHT",running=!1,gameOver=!1,score=0,gameLoop=null;function init(){canvas.width=400,canvas.height=400,setupMobileControls(),startGame()}function setupMobileControls(){const e=document.getElementById("btnUp"),t=document.getElementById("btnDown"),n=document.getElementById("btnLeft"),o=document.getElementById("btnRight");[e,t,n,o].forEach(e=>{e.addEventListener("touchstart",e=>e.preventDefault())}),e.addEventListener("click",()=>{running&&"DOWN"!==direction&&(nextDirection="UP")}),t.addEventListener("click",()=>{running&&"UP"!==direction&&(nextDirection="DOWN")}),n.addEventListener("click",()=>{running&&"RIGHT"!==direction&&(nextDirection="LEFT")}),o.addEventListener("click",()=>{running&&"LEFT"!==direction&&(nextDirection="RIGHT")})}function startGame(){snake=[{x:5,y:5},{x:4,y:5},{x:3,y:5}],direction="RIGHT",nextDirection="RIGHT",score=0,gameOver=!1,running=!0,updateScore(),gameOverScreen.classList.remove("show"),spawnFood(),gameLoop&&clearInterval(gameLoop),gameLoop=setInterval(update,100)}function spawnFood(){let e=!1;for(;!e;)food={x:Math.floor(20*Math.random()),y:Math.floor(20*Math.random())},e=!snake.some(e=>e.x===food.x&&e.y===food.y)}function update(){if(!running)return;direction=nextDirection;const e={...snake[0]};switch(direction){case"UP":e.y--;break;case"DOWN":e.y++;break;case"LEFT":e.x--;break;case"RIGHT":e.x++}if(e.x<0||e.x>=20||e.y<0||e.y>=20)return void endGame();if(snake.some(t=>t.x===e.x&&t.y===e.y))return void endGame();snake.unshift(e),e.x===food.x&&e.y===food.y?(score+=10,updateScore(),spawnFood()):snake.pop(),draw()}function draw(){ctx.fillStyle="#9bbc0f",ctx.fillRect(0,0,canvas.width,canvas.height),ctx.fillStyle="#306230",ctx.fillRect(20*food.x,20*food.y,20,20),snake.forEach((e,t)=>{ctx.fillStyle=0===t?"#0f380f":"#306230",ctx.fillRect(20*e.x,20*e.y,20,20)})}function endGame(){running=!1,gameOver=!0,clearInterval(gameLoop),finalScoreElement.textContent=score,gameOverScreen.classList.add("show")}function updateScore(){scoreElement.textContent=score}function restartGame(){startGame()}document.addEventListener("keydown",e=>{if(gameOver&&"Space"===e.code)return void restartGame();if(!running)return;switch(e.key){case"ArrowUp":case"w":case"W":"DOWN"!==direction&&(nextDirection="UP"),e.preventDefault();break;case"ArrowDown":case"s":case"S":"UP"!==direction&&(nextDirection="DOWN"),e.preventDefault();break;case"ArrowLeft":case"a":case"A":"RIGHT"!==direction&&(nextDirection="LEFT"),e.preventDefault();break;case"ArrowRight":case"d":case"D":"LEFT"!==direction&&(nextDirection="RIGHT"),e.preventDefault()}}),init()</script></body></html>'></iframe>
+        </div>
+
+        <!-- Fireworks - Bottom Right -->
+        <div class="game-section">
+            <h2 class="game-title">🎆 Fireworks Display</h2>
+            <canvas id="fireworks-canvas" style="width: 100%; height: 600px; background: #000; border-radius: 10px;"></canvas>
+        </div>
+    </div>
+
+    <script src="assets/js/game.js"></script>
+</body>
+</html>
